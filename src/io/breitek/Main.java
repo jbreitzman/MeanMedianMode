@@ -26,7 +26,8 @@ public class Main {
 	private static final List<Double> numArr = new ArrayList<>();
 	
 	public static void main(String[] args) {
-		System.out.println("Please enter a number and press [Enter], when you done adding numbers press any letter.");
+		System.out.println("This program will calculate the (Mean/Median/Mode) of the numbers you input into the program.\n");
+		System.out.println("Please enter a number (e.g., 1, 15.3, -4) and press [Enter], when you are done adding numbers press any letter then press [Enter].");
 		getInput();
 		
 		// Sort Array
