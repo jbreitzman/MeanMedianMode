@@ -64,7 +64,7 @@ public class Main {
 	 * 
 	 * @param List<Double> numArr
 	 */
-	private static void getMode(List<Double> numArr) {
+	public static Set<Double> getMode(List<Double> numArr) {
 		Map<Double, Integer> numList = new HashMap<>();
 		Set<Double> modes = new TreeSet<>();
 		
@@ -97,6 +97,8 @@ public class Main {
 		System.out.println("The Mode is: " + modes);	
 		System.out.println("Number of occurrences: " + maxNum);	
 		System.out.println("==========================================================");
+		
+		return modes;
 	}
 
 	/**
@@ -106,7 +108,7 @@ public class Main {
 	 * 
 	 * @param List<Double> numArr
 	 */
-	private static void getMedian(List<Double> numArr) {
+	public static double getMedian(List<Double> numArr) {
 		int arrCount = numArr.size();
 		int midIndex = 0;
 		double median = 0;
@@ -126,6 +128,8 @@ public class Main {
 		System.out.println("==========================================================");
 		System.out.println("The Median is: " + String.format("%.2f", median));	
 		System.out.println("==========================================================");
+		
+		return Double.parseDouble(String.format("%.2f", median));
 	}
 
 	/**
@@ -135,7 +139,7 @@ public class Main {
 	 * 
 	 * @param List<Double> numArr
 	 */
-	private static void getMean(List<Double> numArr) {
+	public static double getMean(List<Double> numArr) {
 		double total = 0.0;
 		
 		for(double num : numArr) {
@@ -145,5 +149,7 @@ public class Main {
 		System.out.println("==========================================================");
 		System.out.println("The Mean is: " + String.format("%.2f", total/numArr.size()));	
 		System.out.println("==========================================================");
+		
+		return Double.parseDouble(String.format("%.2f", total/numArr.size()));
 	}
 }
